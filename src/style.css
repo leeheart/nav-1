@@ -1,0 +1,175 @@
+/* css reset */
+*{box-sizing: border-box;}
+*::before, *::after{box-sizing: border-box;}
+*{margin: 0;padding: 0;}
+ul,ol{list-style: none;}
+a{color: inherit;text-decoration: none;}
+img{max-width: 100%;max-height: 100%;}
+
+/* style */
+body{
+  background: #EEE;
+}
+.globalHeader{
+  margin: 20px;
+}
+@media (min-width: 500px){
+  .globalHeader{
+    margin: 100px 0 80px;
+  }
+}
+.searchForm{
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 500px){
+  .searchForm{
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.searchForm > input{
+  flex-grow: 1;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #DDD;
+  margin-right: 10px;
+  font-size: 16px;
+  padding: 15px;
+}
+.searchForm > input:focus{
+  outline: none;
+  box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+.searchForm > input:hover{
+  box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+.searchForm > button{
+  border-radius: 20px;
+  border: none;
+  background: #3388FF;
+  color: white;
+  font-size: 16px;
+  padding: 0 14px;
+}
+.searchForm > button:focus{
+  outline: none;
+}
+.searchForm > button:hover{
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0,0,0,0.8);
+}
+@media (min-width: 500px){
+  .searchForm > button{
+    padding: 0 20px;
+  }
+}
+.globalMain{
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.globalMain .siteList{
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (min-width: 500px){
+  .globalMain .siteList{
+    margin-left: 0;
+    margin-right: -50px;
+    justify-content: flex-start;
+  }
+}
+.globalMain .siteList > li{
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+@media (min-width: 500px){
+  .globalMain .siteList > li{
+    margin-bottom: 50px;
+  }
+}
+.globalMain .siteList .site{
+  border: 1px solid #DDD;
+  background: white;
+  width: 160px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+  position: relative;
+}
+@media (min-width: 500px){
+  .globalMain .siteList .site{
+    margin-right: 50px;
+  }
+  .globalMain .siteList .site:hover{
+    box-shadow: 0 0 2px rgba(0,0,0,0.8);
+  }
+}
+.globalMain .siteList .site .logo{
+  height: 64px;
+  width: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 64px;
+  text-transform: uppercase;
+}
+.globalMain .siteList .site .link{
+  font-size: 14px;
+  margin-top: 4px;
+}
+.globalMain .siteList .site .deleteSite{
+  position: absolute;
+  right: 2px;
+  top: 2px;
+}
+@media (min-width: 500px){
+  .globalMain .siteList .site .deleteSite{
+    display: none;
+    cursor: default;
+  }
+  .globalMain .siteList .site:hover .deleteSite{
+    display: block;
+  }
+}
+.globalMain .siteList .site .deleteSite .icon{
+  width: 20px;
+  height: 20px;
+}
+
+.globalMain .siteList .addButton{
+  border: 1px solid #DDD;
+  background: white;
+  width: 160px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px 0;
+}
+.globalMain .siteList .addButton:hover{
+  box-shadow: 0 0 2px rgba(0,0,0,0.8);
+}
+.globalMain .siteList .addButton .icon-wrapper{
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.globalMain .siteList .addButton .icon{
+  width: 56px;
+  height: 56px;
+}
+.globalMain .siteList .addButton .text{
+  font-size: 14px;
+  margin-top: 4px;
+}
