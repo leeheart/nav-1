@@ -8,14 +8,26 @@ img{max-width: 100%;max-height: 100%;}
 
 /* style */
 body{
-  background: #EEE;
+  background: url(./images/bg.png);
 }
 .globalHeader{
   margin: 20px;
 }
+.globalHeader .logo{
+  background-image: url(./images/logo.png);
+  background-position: center;
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  transition: transform 0.5s cubic-bezier(0.71, 0.01, 0.25, 0.99);;
+}
+.globalHeader .logo:hover{
+  transform: rotate(360deg);
+}
 @media (min-width: 500px){
   .globalHeader{
-    margin: 100px 0 80px;
+    margin: 60px 0 60px;
   }
 }
 .searchForm{
